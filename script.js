@@ -23,7 +23,7 @@ function update(data) {
     console.log(ws,temp,weathe,E);
     wSpeedTag.innerHTML=`Windspeed: ${ws}<i class="fa-solid fa-wind"></i> `;
     tempTag.innerHTML=`Temperature: ${temp}<i class="fa-solid fa-temperature-arrow-down"></i> `;
-    imgTag.src= `assets/${weathe}.png`;
+    imgTag.src= `${weathe}.png`;
 
     
 }
@@ -64,5 +64,6 @@ Btn.addEventListener("click", () => {
 
 // console.log(temp);
 // console.log(windspeed);
+
 
  
