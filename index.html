@@ -8,26 +8,27 @@
     <link href="https://fonts.googleapis.com" rel="stylesheet">
 </head>
 <body>
+    <div class="loader load">
+        <img src="assets/loader.gif" class="loaderimg" alt="">
+        </div>
     <div class="weather">
         <div class="search">
 
-            <input type="text" placeholder="Enter your location " class="input" ><i class="fa-regular fa-cloud" id="cloud-icon"></i></input>
+            <input type="text" placeholder="Enter your location " class="input" >        </input>
+            <div id="cloud-icon">
+            <i class="fa-regular fa-cloud" ></i>
+            </div>
             <button class="sumbit" ><i class="fa-solid fa-magnifying-glass"></i></button>
-
         </div>
-      
-                         
                 <img src="" class="baailImg" alt=""> 
-                         
-              
-
                 <div class="info">
-                    <h2 class="wind-speed"></h2>
-                    <h2 class="temperature"></h2>
+                    <div class="wind-speed"></div>
+                    <div class="temperature"></div>
             </div>
 
         </div>
 
+         <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="https://kit.fontawesome.com/0ecd95a8f3.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>

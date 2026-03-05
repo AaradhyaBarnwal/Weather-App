@@ -6,28 +6,47 @@ const wSpeedTag = document.querySelector(".wind-speed");
 
 const tempTag = document.querySelector(".temperature");
 
-// const parentImgTag = document.querySelector('.v')
+const loaderTag = document.querySelector(".loader");
 
 const imgTag = document.querySelector('.baailImg')
-// let inputbox = "london";
+window.addEventListener('load', function() {
+    
+    loaderTag.classList.add('hidethis');
+});
+
 const api = "c305233faba00108b8a555c3d80c2174";
 
-
+inputbox.click();
 
 let weatherData; 
 function update(data) {
-    var ws = data.wind.speed;
+    var E = data.cod
+    if (E>300) {
+        let messageTag = data.message;
+        imgTag.src=`assets/${E}.png`;
+        wSpeedTag.innerHTML=`${messageTag}`;
+        tempTag.innerHTML=`Try again`;
+    } else {
+     var ws = data.wind.speed;
     var temp = data.main.temp;
     var weathe = data.weather[0].main;
-    var E = data.cod
+    
     console.log(ws,temp,weathe,E);
-    wSpeedTag.innerHTML=`Windspeed: ${ws}<i class="fa-solid fa-wind"></i> `;
-    tempTag.innerHTML=`Temperature: ${temp}<i class="fa-solid fa-temperature-arrow-down"></i> `;
-    imgTag.src= `${weathe}.png`;
+    wSpeedTag.innerHTML=`Windspeed: ${ws}<i id='wind-icon' class="fa-solid fa-wind"></i> `;
+    tempTag.innerHTML=`Temperature:  ${temp}<i id='temp-icon' class="fa-solid fa-temperature-arrow-down"></i> `;
+    imgTag.src= `assets/${weathe}.png`;
 
+     }
+    
     
 }
 async function getData(city) {
+
+    loaderTag.classList.remove('hidethis');
+
+
+
+
     try {
 let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api}`;
         const response = await fetch(url);  
@@ -37,7 +56,11 @@ let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api
     } catch (error) {
         console.error("Error fetching data:", error); 
     }
+
+
+    loaderTag.classList.add('hidethis');
 }
+
 
 function savedata() {
     
@@ -48,7 +71,6 @@ Btn.addEventListener("click", () => {
     getData(city);
 
 });
-
 
 
 
@@ -64,6 +86,5 @@ Btn.addEventListener("click", () => {
 
 // console.log(temp);
 // console.log(windspeed);
-
 
  

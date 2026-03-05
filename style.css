@@ -1,4 +1,304 @@
+@font-face {
+        font-family: "anja"; 
+        src: url("assets/fonts/anja.ttf");
+    }
 body{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-family: "anja";
+}
+
+.weather{
+    display: grid;
+    background-image: linear-gradient(to bottom , #F5EFFF , #E5D9F2 , #CDC1FF , #A294F9);
+    align-items: start;
+    justify-self: center;
+    justify-content: center;
+    height: 90vh;
+    border-radius: 5%;
+    margin: 5%;
+    gap: 0;
+    width: 350px;
+}
+
+img{
+    max-width: 70%;
+    height: auto;
+    justify-self: center;
+}
+.loader{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: rgba(26, 26, 64, 0.5); 
+    left: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+
+}
+.loaderimg{
+    width: 50px;
+    height: auto;
+    opacity: 100%;
+}
+.hidethis{
+    display: none;
+}
+
+.info{
+    justify-self: center;
+    font-size: x-large;
+    font-weight: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #1A1A40;
+    padding: 3px;
+}
+
+.search{
+    margin-top: 25px;
+    height: 35px;
+    background-color:#fff;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    padding: 10px;
+    width: 250px;
+    justify-content: space-evenly;
+    justify-self: center;
+    align-items: center;
+    display: flex;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: solid 1px black;
+  animation: border-flicker 0.2s linear infinite;
+}
+
+.input{
+    border: none;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+#cloud-icon {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.sumbit{
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    color: black; 
+    transition: all 0.3s ease;
+    padding: 5px;
+    outline: none;    
+    margin-left: 2px;
+}
+
+.sumbit:hover{
+    background-color: #A294F9;
+    color: white; 
+    border-radius: 30%;
+    transform: scale(1.1);
+}
+
+.sumbit:active{
+    background-color: #1A1A40;
+    color: white; 
+    border-radius: 50%;
+    transform: scale(1.1);
+}
+
+@keyframes border-flicker {
+  0%, 100% {
+    border-bottom-color: black;
+  }
+  50% {
+    border-bottom-color: gray;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body{
     align-content: center;
     display: flex;
     flex-wrap: wrap;
@@ -79,4 +379,4 @@ img{
 #cloud-icon{
     font-weight: 300;
     font-size: 25px;
-}
+} */
